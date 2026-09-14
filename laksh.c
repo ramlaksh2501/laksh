@@ -12,7 +12,7 @@ int main(int argv, char ** argc){
 	while(1){
 	printf(">");
 	char input[MAX_INPUT];
-	scanf("%s",input);
+	fgets(input,MAX_INPUT,stdin);
 	printf("%s\n",input);
 	input[strcspn(input,"\n")]=0;
 	char **token=tokenize(input);
