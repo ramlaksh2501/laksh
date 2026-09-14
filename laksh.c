@@ -3,6 +3,7 @@
 #include<sys/wait.h>
 #include<string.h>
 #include<stdlib.h>
+#include"tokenize.h"
 
 
 #define MAX_INPUT 1000
