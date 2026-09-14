@@ -1,5 +1,6 @@
 CC= gcc
-CFLAGS= -Wno-implicit-funciton-declaration
+CFLAGS= -Wno-implicit-funciton-declaration -Wno-builtin-declaration-mismatch 
+
 
 output:laksh.o tokenizer.o 
 	$(CC) laksh.o tokenizer.o -o laksh
