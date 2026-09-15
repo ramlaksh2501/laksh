@@ -15,7 +15,6 @@ int main(int argv, char ** argc){
 	char input[MAX_INPUT];
 	fgets(input,MAX_INPUT,stdin);
 	input[strcspn(input,"\n")]=0;
-	printf("%s\n",input);
 	if(strcmp(input,"exit")==0) return 0;
 	int id=fork();
 	if(id==0){
@@ -26,6 +25,5 @@ int main(int argv, char ** argc){
 			}
 	}
 	wait(NULL);
-	printf("job done\n");
 	}
 	return 0;}
