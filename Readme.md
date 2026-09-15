@@ -1,6 +1,9 @@
 # LAKSH - Laksh a knockoff shell
 A simple shell for unix based systems.  
 note: this is still under development 
+## Features
+So far this shell is able to run single cmds with multiple args (some times it fails).
+Features like pipe,wildcard and others will be implemented in the future.
 ## To use 
 ### Linux 
 ```console
