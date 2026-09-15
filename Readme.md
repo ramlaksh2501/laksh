@@ -9,7 +9,7 @@ note: this is still under development
  make
  ./laksh
  ```
-#### To make it as the default shell (if can handle it )
+#### To make it as the default shell (if you can handle it )
 add it to the available shells in the /etc/shells (add path to the binary of the shell)
 then replace your user shell from what ever shell you are using with the path to this binary 
 (it is prefered to move the binary to the /bin or /usr/bin) 
