@@ -19,6 +19,10 @@ int main(int argv, char ** argc){
 	int id=fork();
 	if(id==0){
 		char **token=tokenize(input);
+		if(token==ERR_ENDQOT){
+			printf("Error: no end quotes\n");
+			return 0;
+			}
 		if(execvp(token[0],token)<0){
 			printf("No such cmd as \"%s\"\n",token[0]);
 			return 0;
