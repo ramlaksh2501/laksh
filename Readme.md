@@ -21,4 +21,4 @@ then replace your user shell from what ever shell you are using with the path to
 ## Contribution and support
 All issues and PRs are welcome, feel free to help your friend.
 ## Use of AI tools
-No AI tool is used throughout this project, everything is handcrafted. I don't hate AI but I prefer not to use any tools as this is a project for me to learn and explore.
+No AI tool is used throughout this project, everything is handcrafted. I don't hate AI but I prefer not to use any tools, as this is a project for me to learn and explore.

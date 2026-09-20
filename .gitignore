@@ -2,5 +2,7 @@ test
 sample
 out
 a.out
-
+*.o
+*.out
+laksh
 nothing
