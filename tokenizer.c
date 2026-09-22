@@ -39,7 +39,7 @@ extern char** tokenize(char *input){
 					continue;
 				}
 				else{
-					return (char **) ERR_ENDQOT;
+					return ERR_ENDQOT;
 				}
 
 
