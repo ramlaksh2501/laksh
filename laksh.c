@@ -19,7 +19,7 @@ int main(int argv, char ** argc){
 	int id=fork();
 	if(id==0){
 		char **token=tokenize(input);
-		if(token==ERR_ENDQOT){
+		if(token== (char **) ERR_ENDQOT){
 			printf("Error: no end quotes\n");
 			return 0;
 			}
