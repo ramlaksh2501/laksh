@@ -17,8 +17,19 @@ int main(int argv, char ** argc){
 	input[strcspn(input,"\n")]=0;
 	if(strcmp(input,"exit")==0) return 0;
 	int id=fork();
+	char **token=tokenize(input);
+	if(strcmp(token[0],"cd")==0 && token[2]==NULL){
+
+		if(chdir(token[1])!=0){
+			printf("no such path\n");
+		}
+		
+		}
+
 	if(id==0){
-		char **token=tokenize(input);
+		if(strcmp(token[0],"cd")==0 && token[2]==NULL){
+		return 0;
+		}
 		if(token==ERR_ENDQOT){
 			printf("Error: no end quotes\n");
 			return 0;
