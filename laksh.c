@@ -7,6 +7,7 @@
 
 
 #define MAX_INPUT 1000
+#define MAX_PATH 1000
 
 int main(int argv, char ** argc){
 	int i=0;
@@ -16,16 +17,21 @@ int main(int argv, char ** argc){
 	fgets(input,MAX_INPUT,stdin);
 	input[strcspn(input,"\n")]=0;
 	if(strcmp(input,"exit")==0) return 0;
-	int id=fork();
 	char **token=tokenize(input);
 	if(strcmp(token[0],"cd")==0 && token[2]==NULL){
 
 		if(chdir(token[1])!=0){
 			printf("no such path\n");
 		}
+		else{
+		   char *buffer=(char*)malloc(sizeof(char)*MAX_PATH);
+		   getcwd(buffer,MAX_PATH);
+		   printf("switched to: %s\n",buffer);
+		   free(buffer);
+		}
 		
 		}
-
+  	int id=fork();
 	if(id==0){
 		if(strcmp(token[0],"cd")==0 && token[2]==NULL){
 		return 0;
