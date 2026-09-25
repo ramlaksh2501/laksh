@@ -25,8 +25,9 @@ int main(int argv, char ** argc){
 		}
 		else{
 		   char *buffer=(char*)malloc(sizeof(char)*MAX_PATH);
-		   getcwd(buffer,MAX_PATH);
+		   if(getcwd(buffer,MAX_PATH)!=NULL){
 		   printf("switched to: %s\n",buffer);
+		   }
 		   free(buffer);
 		}
 		
