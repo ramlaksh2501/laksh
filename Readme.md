@@ -2,7 +2,10 @@
 A simple shell for unix based systems.  
 note: this is still under development 
 ## Features
-So far this shell is able to run single cmds with multiple args (some times it fails).
+* Able to run single cmd with multiple args 
+* Able to change the working directory (cd works)
+* Able to pass a string as argument with double quotes
+
 Features like pipe,wildcard and others will be implemented in the future.
 ## To use 
 ### Linux 
