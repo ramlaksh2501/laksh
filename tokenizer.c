@@ -23,14 +23,13 @@ extern char** tokenize(char *input){
 				got_quotes=0;
 			}
 			else{
-				qoute_tok=malloc(sizeof(char)*strlen(tok)+2);
-				qoute_tok=strcpy(qoute_tok,tok);
+				qoute_tok=malloc(sizeof(char)*strlen(tok)+1);
+				qoute_tok=strcpy(qoute_tok,tok+1);
 				strcat(qoute_tok," ");
 				tok=strtok(NULL,"\"");
 				if(tok!=NULL){
-					qoute_tok=realloc(qoute_tok,sizeof(char)*(strlen(tok)+strlen(qoute_tok)+1));
+					qoute_tok=realloc(qoute_tok,sizeof(char)*(strlen(tok)+strlen(qoute_tok)));
 					strcat(qoute_tok,tok);
-					strcat(qoute_tok,"\"");
 					tokens[i]=(char*)malloc(sizeof(char)*strlen(qoute_tok)+1);
 					strcpy(tokens[i],qoute_tok);
 					tok=(char*)strtok(NULL," ");
